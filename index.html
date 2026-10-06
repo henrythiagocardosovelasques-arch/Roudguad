@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Rastreamento Logístico</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <h1>🚚 Rastreamento Logístico</h1>
+</header>
+
+<nav>
+  <button onclick="showScreen('dashboard')">Dashboard</button>
+  <button onclick="showScreen('alerts')">Alertas</button>
+</nav>
+
+<main>
+  <section id="dashboard" class="screen active">
+    <h2>Caminhões</h2>
+    <div id="truckList"></div>
+  </section>
+
+  <section id="detail" class="screen">
+    <button onclick="showScreen('dashboard')">⬅ Voltar</button>
+    <h2>Detalhe da Viagem</h2>
+    <div id="map"></div>
+    <p id="routeInfo"></p>
+  </section>
+
+  <section id="alerts" class="screen">
+    <h2>Alertas</h2>
+    <div id="alertList"></div>
+
+    <h3>Chat</h3>
+    <div id="chatBox"></div>
+    <input type="text" id="msgInput" placeholder="Digite mensagem...">
+    <button onclick="sendMessage()">Enviar</button>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
